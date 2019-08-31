@@ -1,0 +1,120 @@
+
+:root {
+  /* Set fade in duration */
+  --fade-time: 0.5s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+.heading {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.info, .specs {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 13px;
+  padding-top: .5%;
+  padding-bottom: 1%;
+  line-height: 2;
+
+}
+.container {
+  max-width: 760px;
+  margin: auto;
+}
+
+.main-img img,
+.imgs img {
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgs {
+    padding-top: 3%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imgs img {
+  cursor: pointer;
+}
+
+
+
+/* Fade in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--fade-time) ease-in 1 forwards;
+}
+
+/* Media Queries */
+@media(max-width: 600px) {
+  .imgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* nav */
+
+ul {
+  list-style-type: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ec9b3b;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ec9b3b;
+  color: white;
+  text-align: center;
+  padding: 1px;
+}
+
+
+.footer p {
+font-family: 'Montserrat', sans-serif;
+font-size: 18px;
+
+}
